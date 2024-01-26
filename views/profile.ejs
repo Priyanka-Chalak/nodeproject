@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>EJS Profile Page</title>
+    <style>
+        h1{
+            color: #fa0c8f;
+        }
+    </style>
+</head>
+<body>
+    <%- include('common/header'); %>
+    <h1>Welcome to EJS page</h1>
+   <h3>UserName:: <%= userdata.username %></h3>
+   <h3>Email:: <%= userdata.email %></h3>
+   <ul>
+    <% userdata.skills.forEach((item)=>{ %>
+        <li><%= item %></li>
+   <% }) %>
+   </ul>
+</body>
+</html>
